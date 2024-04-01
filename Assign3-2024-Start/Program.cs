@@ -246,7 +246,10 @@ double FindHighestValueInMemory(double[] values, int logicalSize)
 
 void FindAverageOfValuesInMemory(double[] values, int logicalSize)
 {
-
+	double sum = 0;
+    for (int i = 0; i < values.Length; i++)
+      sum += values[i];
+    return sum / values.Length;
 }
 
 void SaveMemoryValuesToFile(string[] dates, double[] values, int logicalSize)
@@ -270,5 +273,4 @@ void SaveMemoryValuesToFile(string[] dates, double[] values, int logicalSize)
 void GraphValuesInMemory(string[] dates, double[] values, int logicalSize)
 {
 	Console.WriteLine("Not Implemented Yet");
-	//TODO: Replace this code with yours to implement this function.
 }
