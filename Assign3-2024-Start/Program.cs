@@ -109,11 +109,11 @@ int LoadFileValuesToMemory(string[] dates, double[] values)
 	string[] csvFileInput = File.ReadAllLines(filePath);
 	for(int i = 0; i < csvFileInput.Length; i++)
 	{
-		//Console.WriteLine($"lineIndex: {i}; line: {csvFileInput[i]}");
+		Console.WriteLine($"lineIndex: {i}; line: {csvFileInput[i]}");
 		string[] items = csvFileInput[i].Split(',');
 		for(int j = 0; j < items.Length; j++)
 		{
-			//Console.WriteLine($"itemIndex: {j}; item: {items[j]}");
+			Console.WriteLine($"itemIndex: {j}; item: {items[j]}");
 		}
 		if(i != 0)
 		{
@@ -181,22 +181,6 @@ string PromptDate(string prompt)
 	return date.ToString("MM-dd-yyyy");
 }
 
-double FindLowestValueInMemory(double[] values, int logicalSize)
-{
-
-}
-
-void FindAverageOfValuesInMemory(double[] values, int logicalSize)
-{
-
-}
-
-void SaveMemoryValuesToFile(string[] dates, double[] values, int logicalSize)
-{
-	Console.WriteLine("Not Implemented Yet");
-	//TODO: Replace this code with yours to implement this function.
-}
-
 int AddMemoryValues(string[] dates, double[] values, int logicalSize)
 {
 	double value = 0.0;
@@ -236,6 +220,39 @@ void EditMemoryValues(string[] dates, double[] values, int logicalSize)
 		throw new Exception($"{dateString} is not in memory. Add entry instead.");
 	value = PromptDoubleBetweenMinMax($"Enter a double value", minValue, maxValue);
 	values[foundIndex] = value;
+}
+
+double FindHighestValueInMemory(double[] values, int logicalSize)
+{
+
+}
+
+double FindLowestValueInMemory(double[] values, int logicalSize)
+{
+
+}
+
+void FindAverageOfValuesInMemory(double[] values, int logicalSize)
+{
+
+}
+
+void SaveMemoryValuesToFile(string[] dates, double[] values, int logicalSize)
+{
+	string fileName = Prompt("Enter file name including .csv or .txt: ");
+	string filePath = $"./data/{fileName}";
+	if (logicalSize == 0)
+		throw new Exception("No entries loaded. Please load a file into memory");
+	if (logicalSize > 1)
+		Array.Sort (dates, values, 0, logicalSize);
+	string[] csvLines = new string[logicalSize + 1];
+	csvLines[0] = "dates,values";
+	for (int i = 1; i <= logicalSize; i++)
+	{
+		csvLines[i] = $"{dates[i-1]},{values[i-1].ToString()}";
+	}
+	fileName.WriteAllLines(filePath, csvLines);
+	Console.Writeline($"Save complete. {fileName} has {logicalSize} entries.");
 }
 
 void GraphValuesInMemory(string[] dates, double[] values, int logicalSize)
