@@ -25,7 +25,7 @@ bool loopAgain = true;
         EditMemoryValues(dates, values, logicalSize);
       if (mainMenuChoice == "Q")
       {
-        goAgain = false;
+        loopAgain = false;
         throw new Exception("Bye, hope to see you again.");
       }
       if (mainMenuChoice == "R")
@@ -86,14 +86,14 @@ string Prompt(string prompt)
 		try
 		{
 		Console.Write(prompt);
-		myString = Console.Readline().Trim();
+		myString = Console.ReadLine().Trim();
 		if(string.IsNullOrEmpty(myString))
 			throw new Exception($"Empty Input: Please enter something.");
 		inValidInput = false;
 		}
 		catch (Exception ex)
 		{
-			Console.Writeline(ex.Message);
+			Console.WriteLine(ex.Message);
 		}
 	}
 	return myString;
@@ -145,15 +145,15 @@ double PromptDoubleBetweenMinMax(string prompt, double min, double max)
 	{
 		try
 		{
-			Consle.Write($"{prompt} between {min:n2} and {max:n2}: ");
-			num = double.Parse(Console.Readline());
+			Console.Write($"{prompt} between {min:n2} and {max:n2}: ");
+			num = double.Parse(Console.ReadLine());
 			if (num < min || num > max)
 				throw new Exception($"Invalid. Must be between {min} and {max}.");
 			inValidInput = false;
 		}
 		catch (Exception ex)
 		{
-			Console.Writeline($"{ex.Message}");
+			Console.WriteLine($"{ex.Message}");
 		}
 	}
 	return num;
@@ -163,19 +163,19 @@ string PromptDate(string prompt)
 {
 	bool inValidInput = true;
 	DateTime date = DateTime.Today;
-	Console.Writeline(date);
+	Console.WriteLine(date);
 	while (inValidInput)
 	{
 		try
 		{
 			Console.Write(prompt);
-			date = DateTime.Parse(Console.Readline());
-			Console.Writeline(date);
+			date = DateTime.Parse(Console.ReadLine());
+			Console.WriteLine(date);
 			inValidInput = false;
 		}
 		catch (Exception ex)
 		{
-			Console.Writeline($"{ex.Message}");
+			Console.WriteLine($"{ex.Message}");
 		}
 	}
 	return date.ToString("MM-dd-yyyy");
@@ -193,7 +193,7 @@ int AddMemoryValues(string[] dates, double[] values, int logicalSize)
 			found = true;
 	if(found == true)
 		throw new Exception($"{dateString} is already in memory. Edit entry instead.");
-	value = PromptDoubleBetweenMinMaxMinMax($"Enter a double value", minValue, maxValue);
+	value = PromptDoubleBetweenMinMax($"Enter a double value", minValue, maxValue);
 	dates[logicalSize] = dateString;
 	values[logicalSize] = value;
 	logicalSize++;
@@ -246,10 +246,7 @@ double FindHighestValueInMemory(double[] values, int logicalSize)
 
 void FindAverageOfValuesInMemory(double[] values, int logicalSize)
 {
-	double sum = 0;
-    for (int i = 0; i < values.Length; i++)
-      sum += values[i];
-    return sum / values.Length;
+	Console.WriteLine("Not Implemented Yet");
 }
 
 void SaveMemoryValuesToFile(string[] dates, double[] values, int logicalSize)
@@ -266,8 +263,8 @@ void SaveMemoryValuesToFile(string[] dates, double[] values, int logicalSize)
 	{
 		csvLines[i] = $"{dates[i-1]},{values[i-1].ToString()}";
 	}
-	fileName.WriteAllLines(filePath, csvLines);
-	Console.Writeline($"Save complete. {fileName} has {logicalSize} entries.");
+	File.WriteAllLines(filePath, csvLines);
+	Console.WriteLine($"Save complete. {fileName} has {logicalSize} entries.");
 }
 
 void GraphValuesInMemory(string[] dates, double[] values, int logicalSize)
