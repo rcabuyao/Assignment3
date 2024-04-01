@@ -230,12 +230,18 @@ double FindLowestValueInMemory(double[] values, int logicalSize)
         if (values[i] < min)
           min = values[i];
       }
-		return min;
+	  return min;
 }
 
 double FindHighestValueInMemory(double[] values, int logicalSize)
 {
-
+	double max = values[0];
+      for (int i = 0; i < values.Length; i++)
+      {
+        if (values[i] > max)
+          max = values[i];
+      }
+      return max;
 }
 
 void FindAverageOfValuesInMemory(double[] values, int logicalSize)
