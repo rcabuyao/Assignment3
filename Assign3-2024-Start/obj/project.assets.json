@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\cpsc-1012\\dotnet8-demos\\Programming-Basic\\w-assessment-start-kits\\Assign3-2024-Start\\Assign3-2024-RLaw.csproj",
+      "projectUniqueName": "C:\\cpsc-1012\\Assignment3\\Assign3-2024-Start\\Assign3-2024-RLaw.csproj",
       "projectName": "Assign3-2024-RLaw",
-      "projectPath": "C:\\cpsc-1012\\dotnet8-demos\\Programming-Basic\\w-assessment-start-kits\\Assign3-2024-Start\\Assign3-2024-RLaw.csproj",
+      "projectPath": "C:\\cpsc-1012\\Assignment3\\Assign3-2024-Start\\Assign3-2024-RLaw.csproj",
       "packagesPath": "C:\\Users\\Rhazell\\.nuget\\packages\\",
-      "outputPath": "C:\\cpsc-1012\\dotnet8-demos\\Programming-Basic\\w-assessment-start-kits\\Assign3-2024-Start\\obj\\",
+      "outputPath": "C:\\cpsc-1012\\Assignment3\\Assign3-2024-Start\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Rhazell\\AppData\\Roaming\\NuGet\\NuGet.Config"

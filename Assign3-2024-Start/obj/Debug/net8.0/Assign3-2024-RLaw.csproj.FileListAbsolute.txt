@@ -1,0 +1,15 @@
+C:\cpsc-1012\Assignment3\Assign3-2024-Start\bin\Debug\net8.0\Assign3-2024-RLaw.exe
+C:\cpsc-1012\Assignment3\Assign3-2024-Start\bin\Debug\net8.0\Assign3-2024-RLaw.deps.json
+C:\cpsc-1012\Assignment3\Assign3-2024-Start\bin\Debug\net8.0\Assign3-2024-RLaw.runtimeconfig.json
+C:\cpsc-1012\Assignment3\Assign3-2024-Start\bin\Debug\net8.0\Assign3-2024-RLaw.dll
+C:\cpsc-1012\Assignment3\Assign3-2024-Start\bin\Debug\net8.0\Assign3-2024-RLaw.pdb
+C:\cpsc-1012\Assignment3\Assign3-2024-Start\obj\Debug\net8.0\Assign3-2024-RLaw.GeneratedMSBuildEditorConfig.editorconfig
+C:\cpsc-1012\Assignment3\Assign3-2024-Start\obj\Debug\net8.0\Assign3-2024-RLaw.AssemblyInfoInputs.cache
+C:\cpsc-1012\Assignment3\Assign3-2024-Start\obj\Debug\net8.0\Assign3-2024-RLaw.AssemblyInfo.cs
+C:\cpsc-1012\Assignment3\Assign3-2024-Start\obj\Debug\net8.0\Assign3-2024-RLaw.csproj.CoreCompileInputs.cache
+C:\cpsc-1012\Assignment3\Assign3-2024-Start\obj\Debug\net8.0\Assign3-2024-RLaw.sourcelink.json
+C:\cpsc-1012\Assignment3\Assign3-2024-Start\obj\Debug\net8.0\Assign3-2024-RLaw.dll
+C:\cpsc-1012\Assignment3\Assign3-2024-Start\obj\Debug\net8.0\refint\Assign3-2024-RLaw.dll
+C:\cpsc-1012\Assignment3\Assign3-2024-Start\obj\Debug\net8.0\Assign3-2024-RLaw.pdb
+C:\cpsc-1012\Assignment3\Assign3-2024-Start\obj\Debug\net8.0\Assign3-2024-RLaw.genruntimeconfig.cache
+C:\cpsc-1012\Assignment3\Assign3-2024-Start\obj\Debug\net8.0\ref\Assign3-2024-RLaw.dll
