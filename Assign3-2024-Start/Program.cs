@@ -222,12 +222,18 @@ void EditMemoryValues(string[] dates, double[] values, int logicalSize)
 	values[foundIndex] = value;
 }
 
-double FindHighestValueInMemory(double[] values, int logicalSize)
+double FindLowestValueInMemory(double[] values, int logicalSize)
 {
-
+	double min = values[0];
+      for (int i = 0; i < values.Length; i++)
+      {
+        if (values[i] < min)
+          min = values[i];
+      }
+		return min;
 }
 
-double FindLowestValueInMemory(double[] values, int logicalSize)
+double FindHighestValueInMemory(double[] values, int logicalSize)
 {
 
 }
